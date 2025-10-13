@@ -1,4 +1,4 @@
-from process import Process
+from core.process import Process
 import os
 
 def get_processes(proc_path: str = "/proc") -> dict[int, Process]:

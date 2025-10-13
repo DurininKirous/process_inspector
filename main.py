@@ -1,6 +1,6 @@
-import analyze_processes as analyze
-import gather_processes as proc
-import print_processes 
+import core.analyze_processes as analyze
+import core.gather_processes as proc
+import core.print_processes as print_processes
 
 def main():
     processes = proc.gather_process_fields()

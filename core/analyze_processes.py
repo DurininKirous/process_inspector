@@ -1,4 +1,4 @@
-from process import Process
+from core.process import Process
 
 def sort_processes(processes, key) -> list[Process]:
     list_processes = list(processes.values())
