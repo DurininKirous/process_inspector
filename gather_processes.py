@@ -9,7 +9,7 @@ def get_processes(proc_path: str = "/proc") -> dict[int, Process]:
                 processes[int(entry.name)] = Process(int(entry.name), entry.path)
     return processes
 
-def update_processes(proc_path: str = "/proc"):
+def gather_process_fields(proc_path: str = "/proc"):
     processes = get_processes(proc_path)
     for pid, proc in processes.items():
         proc.load()
