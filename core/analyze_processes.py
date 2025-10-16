@@ -1,6 +1,5 @@
 from core.process import Process
 
-def sort_processes(processes, key) -> list[Process]:
-    list_processes = list(processes.values())
-    sorted_processes = sorted(list_processes, key = lambda p: getattr(p, key))
-    return sorted_processes
+def sort_processes(processes, key, reverse) -> list[Process]:
+    valid = [p for p in processes if getattr(p, key) is not None]
+    return sorted(valid, key=lambda p: getattr(p, key), reverse = reverse)
