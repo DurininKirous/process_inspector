@@ -16,10 +16,12 @@ def process(proc, human: bool=False):
           f"{format_value(proc.vmrss,human):>10} {format_value(proc.vmswap,human):>10} {proc.utime:>10} {proc.stime:>10} "
           f"  {comm:<16} {cmd:<40}")
 
-def output(processes, top: int=0, human: bool=False):
+def output(processes, top: int=-1, human: bool=False, pid: int=0):
     header()
-    count = top
-    if count < 0:
-        count = -1
-    for i in processes[:count]:
+    if top >= 0:
+        items = processes[:top]
+    else:
+        items = processes
+
+    for i in items:
         process(i, human)
