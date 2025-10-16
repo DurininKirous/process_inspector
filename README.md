@@ -26,7 +26,7 @@ and provides flexible sorting, filtering, and human-readable output options.
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/<your_username>/process_inspector.git
+git clone https://github.com/DurininKirous/process_inspector.git
 cd process_inspector
 python3 main.py
 ```
