@@ -16,3 +16,12 @@ def to_bytes(value):
         return 0
     unit = parts[1] if len(parts) > 1 else "B"
     return val * UNIT_MAP.get(unit, 1)
+def to_mbytes(value):
+    return value / UNIT_MAP.get("MB", 1)
+
+def format_value(value, human: bool=False):
+    if not value:
+        return "N/A"
+    if human:
+        return f"{to_mbytes(value):.1f} MB"
+    return str(value)
