@@ -9,4 +9,5 @@ def get_args():
     parser.add_argument("--watch", type=int, default=0, help="постоянный вывод процессов")
     parser.add_argument("--pid", type=int, default=0, help="показать информацию только об одном процессе")
     parser.add_argument("--human", action="store_true", help="показать информацию в человекочитаемом формате")
+    parser.add_argument("--version", action="version", version="process_inspector 1.0.0")
     return parser.parse_args()
