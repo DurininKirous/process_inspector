@@ -5,17 +5,19 @@ import core.unitconv as unitconv
 
 @dataclass
 class Process:
-    pid:              int
-    full_path:        str
-    cmdline: Optional[str] = None
-    comm:    Optional[str] = None
-    vmpeak:  Optional[int] = None
-    vmsize:  Optional[int] = None
-    vmhwm:   Optional[int] = None
-    vmrss:   Optional[int] = None
-    vmswap:  Optional[int] = None
-    utime:   Optional[int] = None
-    stime:   Optional[int] = None
+    pid:                  int
+    full_path:            str
+    cmdline:     Optional[str] = None
+    comm:        Optional[str] = None
+    vmpeak:      Optional[int] = None
+    vmsize:      Optional[int] = None
+    vmhwm:       Optional[int] = None
+    vmrss:       Optional[int] = None
+    vmswap:      Optional[int] = None
+    utime:       Optional[int] = None
+    stime:       Optional[int] = None
+    cpu_percent: Optional[float] = None
+    mem_percent: Optional[float] = None
 
     _status_mapping = {
         "VmPeak": "vmpeak",

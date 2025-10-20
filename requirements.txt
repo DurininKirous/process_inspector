@@ -1,0 +1,3 @@
+# requirements.txt
+# This tool uses only Python standard library.
+
